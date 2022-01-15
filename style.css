@@ -284,6 +284,10 @@ footer{
         font-size: 40px;
         font-weight: 700;
     }
+    .feature-logos{
+
+        grid-template-columns: repeat(4, 1fr);
+    }
     
     .products{
         grid-template-columns: 1fr;
@@ -297,7 +301,7 @@ footer{
         width: 70%;
     }
 }
-@media screen and (max-width:360px){
+@media screen and (max-width:365px){
     .app-buttons{
         display: flex;
         flex-direction: column;
