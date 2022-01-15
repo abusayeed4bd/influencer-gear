@@ -40,6 +40,9 @@ body{
     margin: 40px 0 ;
     font-size: 30px;
 }
+section{
+    padding: 100px 0;
+}
 /* ========================header css============== */
 header{
     padding: 50px 0 ;
@@ -116,8 +119,7 @@ nav{
     width: 100%;
 }
 
-.product-detail{}
-.product-detail h3{}
+
 .price{
     font-size: 18px;
     margin: 10px 0;
@@ -169,9 +171,44 @@ footer{
     display: inline-block;
 
 }
+/* ================app section======================= */
+#app-store{
+    text-align: center;
+}
 
+#app-store .container h2{
+    font-size: 40px;
+    margin: 10px 0 30px 0;
+}
+#app-store .container p{}
 
+.app-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+/* .app-buttons a{
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+} */
+#android{
+    border: 2px solid #e02c6d;
+    color: #e02c6d;
+    background-color: #fff;
+}
+/* #apple{
+    background-color: #e02c6d ;
+    color: #fff;
+    
+} */
 
+.app-image img{
+    width: 50%;
+    margin-top: 40px;
+}
 
 /* =================responsive design============== */
 
@@ -235,9 +272,7 @@ footer{
     .banner-right{
         width: 100%;
     }
-    /* .navigation{
-        display: none;
-    } */
+    
 }
 @media screen and (max-width:688px){
     .products{
