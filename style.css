@@ -1,0 +1,246 @@
+/* google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&display=swap');
+
+/* ---------------------------
+         common style
+---------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.default-btn{
+    text-decoration: none;
+    background-color: #e02c6d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: .4s;
+}
+.fa-arrow-right{
+    transition: .4s;
+}
+.default-btn:hover .fa-arrow-right{
+    transform: translateX(5px);
+}
+
+.section-title{
+    text-align: center;
+    margin: 40px 0 ;
+    font-size: 30px;
+}
+/* ========================header css============== */
+header{
+    padding: 50px 0 ;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation{
+    display: flex;
+}
+
+.navigation li{
+    list-style: none;
+}
+.navigation li a{
+    text-decoration: none;
+    color: #000;
+    padding: 0 20px;
+}
+
+#toggle, label{
+    display: none;
+}
+
+/*========================== banner=============================== css */
+
+.banner{
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    justify-content: space-between;
+}
+.banner-left{
+    width: 60%;
+}
+.banner-left h2{
+    font-size: 50px;
+    font-weight: 800;
+}
+.banner-left p{
+    margin: 20px 0;
+}
+.banner-right{
+    width: 40%;
+}
+.banner-right img{
+    max-width: 100%;
+    background-image: url(./images/Circle\ design.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: .4s;
+}
+
+.banner-right img:hover{
+    transform: scale(1.2);
+}
+
+/* =================product section====================== */
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    /* margin: 0 50px; */
+}
+.product{
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.137);
+    border-radius: 5px;
+    padding: 10px;
+}
+.product-photo img{
+    width: 100%;
+}
+
+.product-detail{}
+.product-detail h3{}
+.price{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.product-detail h4{}
+.rating i,span{
+    font-size: 12px;
+}
+.filled{
+    color: #fb890f;
+}
+.unfilled{
+    color: #ddd;
+}
+
+.pagination{
+    text-align: right;
+    color: #e02c6d;
+    text-transform: uppercase;
+    
+    margin-top: 20px;
+    display: block;
+    text-decoration: none;
+
+}
+
+
+/* =====================footer section========================== */
+
+footer{
+    background-color: #0a0826;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    
+}
+.footer h3{
+    font-size: 30px;
+    margin: 10px 0;
+}
+.footer p{
+    color: #D9DBE1    ;
+}
+.footer-logo i{
+    background-color: rgba(221, 221, 221, 0.287);
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px 5px;
+    display: inline-block;
+
+}
+
+
+
+
+/* =================responsive design============== */
+
+@media screen and (max-width:992px) {
+    .products{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        
+    }
+    
+}
+@media screen and (max-width:850px){
+    .toggle-menu{
+        display: block;
+        font-size: 30px;
+    }
+    .toggle-menu #toggle{
+        display: none;
+    }
+    label{
+        display: block;
+        font-size: 30px;
+    }
+    header{
+        position: relative;
+    }
+    .navigation{
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        background-color: #e02c6d ;
+        color: #fff;
+        display: block;
+        left: 0;
+        top: -1000px;
+        height: 100vh;
+        transition: .4s;
+        
+       
+    }
+    #toggle:checked ~ .navigation{
+        top: 100px;
+    }
+    .navigation li a{
+        color: #fff;
+    }
+    .banner{
+        flex-direction: column;
+       
+        height: fit-content;
+        text-align: center;
+        padding: 40px 0;
+    }
+    .banner-left{
+        width: 100%;
+        order: 2;
+    }
+    .banner-right{
+        width: 100%;
+    }
+    /* .navigation{
+        display: none;
+    } */
+}
+@media screen and (max-width:688px){
+    .products{
+        grid-template-columns: 1fr;
+    }
+}
