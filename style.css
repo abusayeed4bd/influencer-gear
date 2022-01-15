@@ -66,8 +66,12 @@ nav{
     text-decoration: none;
     color: #000;
     padding: 0 20px;
+    transition: .4s ease-in-out;
 }
 
+.navigation li a:hover{
+    color: #e02c6d;
+}
 #toggle, label{
     display: none;
 }
@@ -87,9 +91,10 @@ nav{
 .banner-left h2{
     font-size: 50px;
     font-weight: 800;
+    
 }
 .banner-left p{
-    margin: 20px 0;
+    margin: 40px 0;
 }
 .banner-right{
     width: 40%;
